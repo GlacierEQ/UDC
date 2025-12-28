@@ -6,6 +6,7 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { commandManager } from './command-manager.js';
+import { securityManager } from './security.js';
 import { parseEditBlock, performSearchReplace } from './tools/edit.js';
 import { executeCommand, forceTerminate, listSessions, readOutput } from './tools/execute.js';
 import {
@@ -52,6 +53,7 @@ import {
     SystemPowerActionArgsSchema,
     UnblockCommandArgsSchema,
     WriteFileArgsSchema,
+    VerifyGateArgsSchema,
 } from './tools/schemas.js';
 import {
     changeFileOwnership,
@@ -311,6 +313,12 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
         description: "Perform Windows Registry operations (Windows only).",
         inputSchema: zodToJsonSchema(RegistryOperationArgsSchema),
       },
+      // Security tools
+      {
+        name: "verify_operator_gate",
+        description: "Unlock High-Risk tools by providing the 6-digit code found in ~/.udc_gate_code. Request a code by attempting a high-risk action.",
+        inputSchema: zodToJsonSchema(VerifyGateArgsSchema),
+      },
     ],
   };
 });
@@ -318,6 +326,21 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
 server.setRequestHandler(CallToolRequestSchema, async (request: CallToolRequest) => {
   try {
     const { name, arguments: args } = request.params;
+
+    // Security Gate Check
+    if (!securityManager.isAccessAllowed(name)) {
+        // If high risk and locked, generate code and block
+        if (name !== 'verify_operator_gate') {
+            const gateFile = await securityManager.generateGateCode();
+            return {
+                content: [{
+                    type: "text",
+                    text: `🔒 SECURITY GATE EXCEPTION 🔒\n\nThis tool (${name}) is classified as HIGH RISK.\n\nA verification code has been written to:\n${gateFile}\n\nPlease read this file and verify access using:\nverify_operator_gate(code: "123456")`
+                }],
+                isError: true,
+            };
+        }
+    }
 
     switch (name) {
       // Terminal tools
@@ -440,6 +463,21 @@ server.setRequestHandler(CallToolRequestSchema, async (request: CallToolRequest)
             text: `Allowed directories:\n${directories.join('\n')}`
           }],
         };
+      }
+
+      case "verify_operator_gate": {
+        const parsed = VerifyGateArgsSchema.parse(args);
+        const success = await securityManager.verifyCode(parsed.code);
+        if (success) {
+            return {
+                content: [{ type: "text", text: "✅ ACCESS GRANTED. High-Risk tools unlocked for 15 minutes." }],
+            };
+        } else {
+             return {
+                content: [{ type: "text", text: "❌ ACCESS DENIED. Invalid code." }],
+                isError: true,
+            };
+        }
       }
 
       // System tools

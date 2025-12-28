@@ -62,4 +62,4 @@ runServer().catch(async (error) => {
     message: `Fatal error running server: ${errorMessage}`
   }) + '\n');
   process.exit(1);
-});
+});export * from './security.js';

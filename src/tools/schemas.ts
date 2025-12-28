@@ -149,3 +149,7 @@ export const RegistryOperationArgsSchema = z.object({
 export const ConfigureSecurityArgsSchema = z.object({
   action: z.enum(["disable_blocking", "enable_blocking", "clear_blocked_commands"]),
 });
+
+export const VerifyGateArgsSchema = z.object({
+  code: z.string(),
+});
