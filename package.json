@@ -25,7 +25,7 @@
     "bump": "node scripts/sync-version.js --bump",
     "bump:minor": "node scripts/sync-version.js --bump --minor",
     "bump:major": "node scripts/sync-version.js --bump --major",
-    "build": "tsc && shx cp setup-claude-server.js dist/ && shx cp setup-claude-custom.js dist/ && shx cp setup-claude-windows.js dist/ && shx cp uninstall.js dist/ && shx chmod +x dist/*.js",
+    "build": "node node_modules/typescript/bin/tsc && node node_modules/shx/lib/cli.js cp setup-claude-server.js dist/ && node node_modules/shx/lib/cli.js cp setup-claude-custom.js dist/ && node node_modules/shx/lib/cli.js cp setup-claude-windows.js dist/ && node node_modules/shx/lib/cli.js cp uninstall.js dist/ && node node_modules/shx/lib/cli.js chmod +x dist/*.js",
     "watch": "tsc --watch",
     "start": "node dist/index.js",
     "setup": "npm install && npm run build && node setup-claude-server.js",
@@ -72,6 +72,6 @@
     "@types/node": "^20.11.0",
     "nodemon": "^3.0.2",
     "shx": "^0.3.4",
-    "typescript": "^5.3.3"
+    "typescript": "^5.9.3"
   }
 }

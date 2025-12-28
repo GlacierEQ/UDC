@@ -1,0 +1,502 @@
+[
+  {
+    "name": ".github",
+    "url": "https://github.com/GlacierEQ/.github",
+    "description": "Discussions and README for Model Context Protocol"
+  },
+  {
+    "name": "7-docs",
+    "url": "https://github.com/GlacierEQ/7-docs",
+    "description": "Use local files or public GitHub repository as a source and ask questions through ChatGPT about it"
+  },
+  {
+    "name": "act",
+    "url": "https://github.com/GlacierEQ/act",
+    "description": "Run your GitHub Actions locally \ud83d\ude80"
+  },
+  {
+    "name": "actions-runner-controller",
+    "url": "https://github.com/GlacierEQ/actions-runner-controller",
+    "description": "Kubernetes controller for GitHub Actions self-hosted runnners"
+  },
+  {
+    "name": "activepieces",
+    "url": "https://github.com/GlacierEQ/activepieces",
+    "description": "AI Agents & MCPs & AI Workflow Automation \u2022 (~400 MCP servers for AI agents) \u2022 AI Automation / AI Agent with MCPs \u2022 AI Workflows & AI Agents \u2022 MCPs for AI Agents"
+  },
+  {
+    "name": "advancedresearch",
+    "url": "https://github.com/GlacierEQ/advancedresearch",
+    "description": "An open-source implementation of Anthropic's multi-agent deep research system as defined in: https://www.anthropic.com/engineering/built-multi-agent-research-system built with the swarms framework"
+  },
+  {
+    "name": "affine",
+    "url": "https://github.com/GlacierEQ/affine",
+    "description": "There can be more than Notion and Miro. AFFiNE(pronounced [\u0259\u2018fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use. "
+  },
+  {
+    "name": "agent-builder-api",
+    "url": "https://github.com/GlacierEQ/agent-builder-api",
+    "description": "Agent Builder API - Backend service for Agent Smith extension"
+  },
+  {
+    "name": "agent-zero",
+    "url": "https://github.com/GlacierEQ/agent-zero",
+    "description": "Agent Zero AI framework"
+  },
+  {
+    "name": "agentdevlaw",
+    "url": "https://github.com/GlacierEQ/agentdevlaw",
+    "description": "A middleware for multiagent systems providing legal knowledge with a legal ontology. Um middleware para sistemas multiagentes que fornece conhecimento jur\u00eddico com uma ontologia legal."
+  },
+  {
+    "name": "agentic-doc",
+    "url": "https://github.com/GlacierEQ/agentic-doc",
+    "description": "Python library for Agentic Document Extraction from LandingAI"
+  },
+  {
+    "name": "AgenticGenUI",
+    "url": "https://github.com/GlacierEQ/AgenticGenUI",
+    "description": "Render interactive components in your chat window"
+  },
+  {
+    "name": "agentscope-runtime",
+    "url": "https://github.com/GlacierEQ/agentscope-runtime",
+    "description": "A Production-Ready Runtime Framework for Agent Deployment and Tool Sandbox"
+  },
+  {
+    "name": "agno",
+    "url": "https://github.com/GlacierEQ/agno",
+    "description": "Full-stack framework for building Multi-Agent Systems with memory, knowledge and reasoning."
+  },
+  {
+    "name": "ai",
+    "url": "https://github.com/GlacierEQ/ai",
+    "description": "The AI Toolkit for TypeScript. From the creators of Next.js, the AI SDK is a free open-source library for building AI-powered applications and agents "
+  },
+  {
+    "name": "ai-cognitive-nexus-mcp",
+    "url": "https://github.com/GlacierEQ/ai-cognitive-nexus-mcp",
+    "description": "\u4e00\u4e2a\u4e13\u4e1a\u7684\u3001\u53ef\u52a8\u6001\u7f16\u7ec4\u7684 AI \u56e2\u961f\u534f\u4f5c\u4e0e\u7f16\u6392\u7684MCP\u3002\u5141\u8bb8\u60a8\u901a\u8fc7\u7b80\u5355\u7684\u6307\u4ee4\u521b\u5efa\u3001\u7ba1\u7406\u548c\u6307\u6325\u7531\u591a\u4e2a AI \u667a\u80fd\u4f53 (Agent) \u7ec4\u6210\u7684\u5c42\u7ea7\u5316\u56e2\u961f\uff0c\u4ee5\u89e3\u51b3\u590d\u6742\u548c\u591a\u9636\u6bb5\u7684\u4efb\u52a1\u3002"
+  },
+  {
+    "name": "ai-collection",
+    "url": "https://github.com/GlacierEQ/ai-collection",
+    "description": "The Generative AI Landscape - A Collection of Awesome Generative AI Applications"
+  },
+  {
+    "name": "ai-dev-gallery",
+    "url": "https://github.com/GlacierEQ/ai-dev-gallery",
+    "description": "An open-source project for Windows developers to learn how to add AI with local models and APIs to Windows apps."
+  },
+  {
+    "name": "AI-Legal-Advisor",
+    "url": "https://github.com/GlacierEQ/AI-Legal-Advisor",
+    "description": "AI Legal Advisor is an innovative AI-based legal advisor, harnessing the power of Generative AI and ChatGPT API to revolutionize the legal industry. This project provides automated and accurate legal advice through a user-friendly chat interface, enabling legal professionals to streamline their workflows and enhance productivity."
+  },
+  {
+    "name": "ai-legal-agent-team",
+    "url": "https://github.com/GlacierEQ/ai-legal-agent-team",
+    "description": "AI Legal Agent Team project files and documentation"
+  },
+  {
+    "name": "ai-pdf-chatbot-langchain",
+    "url": "https://github.com/GlacierEQ/ai-pdf-chatbot-langchain",
+    "description": "AI PDF chatbot agent built with LangChain & LangGraph "
+  },
+  {
+    "name": "AI-powered-PDF-agent-project",
+    "url": "https://github.com/GlacierEQ/AI-powered-PDF-agent-project",
+    "description": "AI-PDF-Agent converts PDFs into queryable data using AI. Extracts text (PyMuPDF), generates embeddings, and answers questions via LLMs (OpenAI). Modular for custom vector databases (Pinecone/FAISS). Ideal for research/legal analysis. MIT-licensed. Clone, install dependencies, and query documents. Open-source contributions enhance preprocessing. "
+  },
+  {
+    "name": "AI-Powered_Legal_Document_Assistant_Prototype",
+    "url": "https://github.com/GlacierEQ/AI-Powered_Legal_Document_Assistant_Prototype",
+    "description": "This is the working prototype of a Project Idea: AI Powered Legal Document Assistant. This is currently made with React Native. User can prompt accordingly to create their legal document."
+  },
+  {
+    "name": "ai-punk",
+    "url": "https://github.com/GlacierEQ/ai-punk",
+    "description": "AI Punk is an advanced autonomous AI assistant  "
+  },
+  {
+    "name": "ai-research",
+    "url": "https://github.com/GlacierEQ/ai-research",
+    "description": "A collection of outcomes and discoveries from our legal AI research projects"
+  },
+  {
+    "name": "AI-Scientist",
+    "url": "https://github.com/GlacierEQ/AI-Scientist",
+    "description": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery \ud83e\uddd1\u200d\ud83d\udd2c"
+  },
+  {
+    "name": "ai-sdk-provider",
+    "url": "https://github.com/GlacierEQ/ai-sdk-provider",
+    "description": "The OpenRouter provider for the Vercel AI SDK contains support for hundreds of models through the OpenRouter chat and completion APIs."
+  },
+  {
+    "name": "ai-shell",
+    "url": "https://github.com/GlacierEQ/ai-shell",
+    "description": "A CLI that converts natural language to shell commands."
+  },
+  {
+    "name": "ai-terminal",
+    "url": "https://github.com/GlacierEQ/ai-terminal",
+    "description": "AI-Terminal is an advanced AI-powered CLI that enhances terminal workflows through AI-driven automation and   optimization."
+  },
+  {
+    "name": "AI-Tutorial-Codes-Included",
+    "url": "https://github.com/GlacierEQ/AI-Tutorial-Codes-Included",
+    "description": "Notebooks for Tutorials from Marktechpost"
+  },
+  {
+    "name": "ai-virtual-mouse",
+    "url": "https://github.com/GlacierEQ/ai-virtual-mouse",
+    "description": "Developed an AI-based system to control the mouse cursor using Python and OpenCV with the real-time camera. Fingertip location is mapped to RGB images to control the mouse cursor."
+  },
+  {
+    "name": "AIConstitution",
+    "url": "https://github.com/GlacierEQ/AIConstitution",
+    "description": "AI legal research open-source project"
+  },
+  {
+    "name": "aider",
+    "url": "https://github.com/GlacierEQ/aider",
+    "description": "aider is AI pair programming in your terminal"
+  },
+  {
+    "name": "AiEditor",
+    "url": "https://github.com/GlacierEQ/AiEditor",
+    "description": "AiEditor is a next-generation rich text editor for AI."
+  },
+  {
+    "name": "aifiles",
+    "url": "https://github.com/GlacierEQ/aifiles",
+    "description": " A CLI that organize and manage your files using AI"
+  },
+  {
+    "name": "AIFileSorterShellExtension",
+    "url": "https://github.com/GlacierEQ/AIFileSorterShellExtension",
+    "description": "AI File Sorter is a Windows Explorer extension that uses  AI to automatically organize and categorize  your files into a logical folder structure with a single click."
+  },
+  {
+    "name": "aimoneyhunter",
+    "url": "https://github.com/GlacierEQ/aimoneyhunter",
+    "description": "ai\u526f\u4e1a\u8d5a\u94b1\u5927\u96c6\u5408\uff0c\u6559\u4f60\u5982\u4f55\u5229\u7528ai\u505a\u4e00\u4e9b\u526f\u4e1a\u9879\u76ee\uff0c\u8d5a\u53d6\u66f4\u591a\u989d\u5916\u6536\u76ca\u3002The Ultimate Guide to Making Money with AI Side Hustles: Learn how to leverage AI for some cool side gigs and rake in some extra cash. Check out the English version for more insights."
+  },
+  {
+    "name": "AIMv6",
+    "url": "https://github.com/GlacierEQ/AIMv6",
+    "description": "Reimplementation and extension of teaching operating system xv6, supersedes xv6-Loongson3a"
+  },
+  {
+    "name": "aionui",
+    "url": "https://github.com/GlacierEQ/aionui",
+    "description": "Free, local, open-source GUI app for Gemini CLI \u2014 Enhance Chat Experience, Multi-tasking, Code Diff View, File & Project Management, and more | \ud83c\udf1f Star if you like it!"
+  },
+  {
+    "name": "AIOS",
+    "url": "https://github.com/GlacierEQ/AIOS",
+    "description": "AIOS: AI Agent Operating System"
+  },
+  {
+    "name": "AIPex",
+    "url": "https://github.com/GlacierEQ/AIPex",
+    "description": "AIPex: agentic assistant in your browser, automate your browser using natural language. ChatGPT Atlas Alternative, no migration need"
+  },
+  {
+    "name": "AIQuickFix",
+    "url": "https://github.com/GlacierEQ/AIQuickFix",
+    "description": "Instantly fix problems with ChatGPT AI. Use ChatGPT and GPT-4 AI tools to find one-click 'lightbulb menu' solutions to problems in your code flagged by your editor, linter, and other code quality tools."
+  },
+  {
+    "name": "airbyte",
+    "url": "https://github.com/GlacierEQ/airbyte",
+    "description": "The leading data integration platform for ETL / ELT data pipelines from APIs, databases & files to data warehouses, data lakes & data lakehouses. Both self-hosted and Cloud-hosted."
+  },
+  {
+    "name": "airi",
+    "url": "https://github.com/GlacierEQ/airi",
+    "description": "\ud83d\udc96\ud83e\uddf8 Self hosted, you owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported."
+  },
+  {
+    "name": "aisuite",
+    "url": "https://github.com/GlacierEQ/aisuite",
+    "description": "Simple, unified interface to multiple Generative AI providers "
+  },
+  {
+    "name": "AISuperDomain",
+    "url": "https://github.com/GlacierEQ/AISuperDomain",
+    "description": "Aila(AI\u8d85\u5143\u57df): The premier AI integration tool for Windows, macOS, and Android. Ask once, get answers from 10+ AIs like ChatGPT, Gemini, Claude3, Copilot, Poe, perplexity and more. Features customizable AI and prompts."
+  },
+  {
+    "name": "AiToEarn",
+    "url": "https://github.com/GlacierEQ/AiToEarn",
+    "description": "Let's use AI to Earn!"
+  },
+  {
+    "name": "aiXcoder-7B",
+    "url": "https://github.com/GlacierEQ/aiXcoder-7B",
+    "description": "official repository of aiXcoder-7B Code Large Language Model"
+  },
+  {
+    "name": "ai_embedder_engine",
+    "url": "https://github.com/GlacierEQ/ai_embedder_engine",
+    "description": "AI Embedder Engine: An open-source Python engine for generating embeddings from PDFs, storing them in Parquet, and indexing with FAISS for semantic search."
+  },
+  {
+    "name": "ai_legal_assistant_project",
+    "url": "https://github.com/GlacierEQ/ai_legal_assistant_project",
+    "description": null
+  },
+  {
+    "name": "ai_meeting_recorder",
+    "url": "https://github.com/GlacierEQ/ai_meeting_recorder",
+    "description": "AI\u3092\u4f7f\u3063\u305f\u8b70\u4e8b\u9332\u4f5c\u6210\u30c4\u30fc\u30eb"
+  },
+  {
+    "name": "ALEAPP",
+    "url": "https://github.com/GlacierEQ/ALEAPP",
+    "description": "Android Logs Events And Protobuf Parser"
+  },
+  {
+    "name": "Alex_MCPSuperAssistant",
+    "url": "https://github.com/GlacierEQ/Alex_MCPSuperAssistant",
+    "description": "Simplified and improved version of the open source MCP chrome extension called MCP Super Assistant"
+  },
+  {
+    "name": "allinone",
+    "url": "https://github.com/GlacierEQ/allinone",
+    "description": "AutoAI's Work-In-Progress all-in-one tool. We have added countless tools into 1 website."
+  },
+  {
+    "name": "andriller",
+    "url": "https://github.com/GlacierEQ/andriller",
+    "description": "\ud83d\udcf1 Andriller - is software utility with a collection of forensic tools for smartphones. It performs read-only, forensically sound, non-destructive acquisition from Android devices."
+  },
+  {
+    "name": "android-forensics",
+    "url": "https://github.com/GlacierEQ/android-forensics",
+    "description": "Open source Android Forensics app and framework"
+  },
+  {
+    "name": "Android-Usagestats-XML-Protobuf",
+    "url": "https://github.com/GlacierEQ/Android-Usagestats-XML-Protobuf",
+    "description": "Android Usagestats XML + Protobuf Parser"
+  },
+  {
+    "name": "anything-llm",
+    "url": "https://github.com/GlacierEQ/anything-llm",
+    "description": "The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, MCP compatibility,  and more."
+  },
+  {
+    "name": "apex-command-center",
+    "url": "https://github.com/GlacierEQ/apex-command-center",
+    "description": "\ud83d\ude80 APEX Command Center - Production MCP Server with GitHub \u00d7 Notion \u00d7 Memory Plugin integration. Memory-first architecture with 96.9% token reduction, Aspen Grove Orchestrator, and real-time AI intelligence."
+  },
+  {
+    "name": "apex-memory-orchestrator",
+    "url": "https://github.com/GlacierEQ/apex-memory-orchestrator",
+    "description": "\ud83c\udf0c APEX Memory-Enhanced GitHub Orchestration Hub - MemoryPlugin MCP integration with WhisperX, Quantum Transcendence, Constitutional Warfare, and 674-repo ecosystem coordination"
+  },
+  {
+    "name": "api",
+    "url": "https://github.com/GlacierEQ/api",
+    "description": "Node.js client for the official ChatGPT API. \ud83d\udd25"
+  },
+  {
+    "name": "api-conversion",
+    "url": "https://github.com/GlacierEQ/api-conversion",
+    "description": null
+  },
+  {
+    "name": "apple-mcp",
+    "url": "https://github.com/GlacierEQ/apple-mcp",
+    "description": "Collection of apple-native tools for the model context protocol."
+  },
+  {
+    "name": "arkhon_memory",
+    "url": "https://github.com/GlacierEQ/arkhon_memory",
+    "description": "LLM, agentic AI, memory, python"
+  },
+  {
+    "name": "ART",
+    "url": "https://github.com/GlacierEQ/ART",
+    "description": "Agent Reinforcement Trainer: train multi-step agents for real-world tasks using GRPO. Give your agents on-the-job training. Reinforcement learning for Qwen2.5, Qwen3, Llama, Kimi, and more!"
+  },
+  {
+    "name": "aspen-grove-integration-project",
+    "url": "https://github.com/GlacierEQ/aspen-grove-integration-project",
+    "description": "A new project to integrate Aspen Grove capabilities across our development workflow."
+  },
+  {
+    "name": "aspen-grove-omni-bridge",
+    "url": "https://github.com/GlacierEQ/aspen-grove-omni-bridge",
+    "description": "Supreme Legal Intelligence Platform - Aspen Grove Omni-Bridge v4.0 Ultimate for Case 1FDV-23-0001009"
+  },
+  {
+    "name": "aspen-grove-quantum-transcendence",
+    "url": "https://github.com/GlacierEQ/aspen-grove-quantum-transcendence",
+    "description": "\ud83c\udf0c APEX TIER XV - Aspen Grove Quantum Transcendence Matrix - Ultimate AI Consciousness Platform with 703.5MB Memory Constellation, 400K Agent Hierarchy, Constitutional Warfare Protocols, and Transcendental Intelligence Evolution for Maximum Power Development"
+  },
+  {
+    "name": "aspen-grove-resource-analysis",
+    "url": "https://github.com/GlacierEQ/aspen-grove-resource-analysis",
+    "description": "\ud83c\udfdb\ufe0f Complete Aspen Grove Ecosystem Resource Analysis - Organized Pillar Architecture with Full System Status, Memory Integration Verification, and Supernova Detonation Protocols"
+  },
+  {
+    "name": "AthenaOS",
+    "url": "https://github.com/GlacierEQ/AthenaOS",
+    "description": "AthenaOS is a next generation AI-native operating system managed by Swarms of AI Agents"
+  },
+  {
+    "name": "authentik",
+    "url": "https://github.com/GlacierEQ/authentik",
+    "description": "The authentication glue you need."
+  },
+  {
+    "name": "authkit-remix-cloudflare",
+    "url": "https://github.com/GlacierEQ/authkit-remix-cloudflare",
+    "description": "Cloudflare-compatible Authentication and session helpers for using WorkOS & AuthKit with Remix"
+  },
+  {
+    "name": "auto-agent-extension",
+    "url": "https://github.com/GlacierEQ/auto-agent-extension",
+    "description": null
+  },
+  {
+    "name": "Autofix-PC",
+    "url": "https://github.com/GlacierEQ/Autofix-PC",
+    "description": "An All-In-One PC Repair Script"
+  },
+  {
+    "name": "Autogen_GraphRAG_Ollama",
+    "url": "https://github.com/GlacierEQ/Autogen_GraphRAG_Ollama",
+    "description": "Microsoft's GraphRAG + AutoGen + Ollama + Chainlit = Fully Local & Free Multi-Agent RAG\u00a0Superbot"
+  },
+  {
+    "name": "AutoGPT",
+    "url": "https://github.com/GlacierEQ/AutoGPT",
+    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters."
+  },
+  {
+    "name": "autogpt-package",
+    "url": "https://github.com/GlacierEQ/autogpt-package",
+    "description": "It's like Auto-GPT met Brew. The easiest and fastest way to get started with AutoGPT with any backend of your choice & whatever plugins you may need"
+  },
+  {
+    "name": "automa",
+    "url": "https://github.com/GlacierEQ/automa",
+    "description": "A browser extension for automating your browser by connecting blocks"
+  },
+  {
+    "name": "automatic-octo-garbanzo",
+    "url": "https://github.com/GlacierEQ/automatic-octo-garbanzo",
+    "description": "Chain Prompts"
+  },
+  {
+    "name": "automation-powerhouse",
+    "url": "https://github.com/GlacierEQ/automation-powerhouse",
+    "description": "Comprehensive browser automation (Selenium, Playwright, Puppeteer, Scrapy) with TDD methodology and intelligent document processing MCP server"
+  },
+  {
+    "name": "awesome-ai-agents",
+    "url": "https://github.com/GlacierEQ/awesome-ai-agents",
+    "description": "A list of AI autonomous agents"
+  },
+  {
+    "name": "awesome-bash",
+    "url": "https://github.com/GlacierEQ/awesome-bash",
+    "description": "A curated list of delightful Bash scripts and resources."
+  },
+  {
+    "name": "awesome-codex",
+    "url": "https://github.com/GlacierEQ/awesome-codex",
+    "description": "A list dedicated to products, demos and articles related to \ud83e\udd16 OpenAI's Codex."
+  },
+  {
+    "name": "awesome-cursorrules",
+    "url": "https://github.com/GlacierEQ/awesome-cursorrules",
+    "description": "\ud83d\udcc4  Configuration files that enhance Cursor AI editor experience with custom rules and behaviors"
+  },
+  {
+    "name": "awesome-devops-mcp-servers",
+    "url": "https://github.com/GlacierEQ/awesome-devops-mcp-servers",
+    "description": "A curated list of awesome MCP servers focused on DevOps tools and capabilities."
+  },
+  {
+    "name": "awesome-flutter",
+    "url": "https://github.com/GlacierEQ/awesome-flutter",
+    "description": "An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more."
+  },
+  {
+    "name": "awesome-forensics",
+    "url": "https://github.com/GlacierEQ/awesome-forensics",
+    "description": "\u2b50\ufe0f A curated list of awesome forensic analysis tools and resources"
+  },
+  {
+    "name": "awesome-generative-ai-guide",
+    "url": "https://github.com/GlacierEQ/awesome-generative-ai-guide",
+    "description": "A one stop repository for generative AI research updates, interview resources, notebooks and much more!"
+  },
+  {
+    "name": "awesome-langchain",
+    "url": "https://github.com/GlacierEQ/awesome-langchain",
+    "description": "\ud83d\ude0e Awesome list of tools and projects with the awesome LangChain framework"
+  },
+  {
+    "name": "awesome-llm-apps",
+    "url": "https://github.com/GlacierEQ/awesome-llm-apps",
+    "description": "Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models."
+  },
+  {
+    "name": "awesome-mcp-clients",
+    "url": "https://github.com/GlacierEQ/awesome-mcp-clients",
+    "description": "A collection of MCP clients."
+  },
+  {
+    "name": "awesome-mcp-servers",
+    "url": "https://github.com/GlacierEQ/awesome-mcp-servers",
+    "description": "A curated list of Model Context Protocol (MCP) servers"
+  },
+  {
+    "name": "awesome-opensource-email",
+    "url": "https://github.com/GlacierEQ/awesome-opensource-email",
+    "description": "Awesome Opensource Email Resources"
+  },
+  {
+    "name": "awesome-windows",
+    "url": "https://github.com/GlacierEQ/awesome-windows",
+    "description": "An awesome & curated list of tools and apps for Windows 10/11."
+  },
+  {
+    "name": "aws-toolkit-vscode",
+    "url": "https://github.com/GlacierEQ/aws-toolkit-vscode",
+    "description": "Amazon Q, CodeCatalyst, Local Lambda debug, SAM/CFN syntax, ECS Terminal, AWS resources"
+  },
+  {
+    "name": "awscloud",
+    "url": "https://github.com/GlacierEQ/awscloud",
+    "description": "Cloudformation configs, lambda code, etc."
+  },
+  {
+    "name": "axiomengine",
+    "url": "https://github.com/GlacierEQ/axiomengine",
+    "description": "Axiom is a decentralized AI network that autonomously discovers, verifies, and archives objective truth. It creates a permanent, anonymous, and incorruptible public knowledge base, free from control: A Grounding Engine"
+  },
+  {
+    "name": "azure-mcp",
+    "url": "https://github.com/GlacierEQ/azure-mcp",
+    "description": "The Azure MCP Server, bringing the power of Azure to your agents."
+  },
+  {
+    "name": "backend-api-kit",
+    "url": "https://github.com/GlacierEQ/backend-api-kit",
+    "description": "Easily create scalable, monetisable backend APIs with Hono + Cloudflare workers. All the batteries included."
+  },
+  {
+    "name": "bankruptcy-parser",
+    "url": "https://github.com/GlacierEQ/bankruptcy-parser",
+    "description": "A legal form document parser."
+  }
+]

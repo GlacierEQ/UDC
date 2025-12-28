@@ -1,43 +1,75 @@
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import {
-  CallToolRequestSchema,
-  ListToolsRequestSchema,
-  type CallToolRequest,
+    CallToolRequestSchema,
+    ListToolsRequestSchema,
+    type CallToolRequest,
 } from "@modelcontextprotocol/sdk/types.js";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { commandManager } from './command-manager.js';
-import {
-  ExecuteCommandArgsSchema,
-  ReadOutputArgsSchema,
-  ForceTerminateArgsSchema,
-  ListSessionsArgsSchema,
-  KillProcessArgsSchema,
-  BlockCommandArgsSchema,
-  UnblockCommandArgsSchema,
-  ReadFileArgsSchema,
-  ReadMultipleFilesArgsSchema,
-  WriteFileArgsSchema,
-  CreateDirectoryArgsSchema,
-  ListDirectoryArgsSchema,
-  MoveFileArgsSchema,
-  SearchFilesArgsSchema,
-  GetFileInfoArgsSchema,
-  EditBlockArgsSchema,
-} from './tools/schemas.js';
-import { executeCommand, readOutput, forceTerminate, listSessions } from './tools/execute.js';
-import { listProcesses, killProcess } from './tools/process.js';
-import {
-  readFile,
-  readMultipleFiles,
-  writeFile,
-  createDirectory,
-  listDirectory,
-  moveFile,
-  searchFiles,
-  getFileInfo,
-  listAllowedDirectories,
-} from './tools/filesystem.js';
 import { parseEditBlock, performSearchReplace } from './tools/edit.js';
+import { executeCommand, forceTerminate, listSessions, readOutput } from './tools/execute.js';
+import {
+    createDirectory,
+    getFileInfo,
+    listAllowedDirectories,
+    listDirectory,
+    moveFile,
+    readFile,
+    readMultipleFiles,
+    searchFiles,
+    writeFile,
+} from './tools/filesystem.js';
+import { killProcess, listProcesses } from './tools/process.js';
+import {
+    BlockCommandArgsSchema,
+    ChangeFileOwnershipArgsSchema,
+    CheckPortArgsSchema,
+    CreateDirectoryArgsSchema,
+    CreateScheduledTaskArgsSchema,
+    CreateSymbolicLinkArgsSchema,
+    DeleteScheduledTaskArgsSchema,
+    EditBlockArgsSchema,
+    ExecuteCommandArgsSchema,
+    ExecuteCommandChainArgsSchema,
+    ForceTerminateArgsSchema,
+    GetFileInfoArgsSchema,
+    GetNetworkInfoArgsSchema,
+    GetSystemInfoArgsSchema,
+    KillProcessArgsSchema,
+    ListDirectoryArgsSchema,
+    ListScheduledTasksArgsSchema,
+    ListServicesArgsSchema,
+    ListSessionsArgsSchema,
+    ManageServiceArgsSchema,
+    MoveFileArgsSchema,
+    ReadFileArgsSchema,
+    ReadMultipleFilesArgsSchema,
+    ReadOutputArgsSchema,
+    RegistryOperationArgsSchema,
+    ScanNetworkArgsSchema,
+    SearchFilesArgsSchema,
+    SetFilePermissionsArgsSchema,
+    SystemPowerActionArgsSchema,
+    UnblockCommandArgsSchema,
+    WriteFileArgsSchema,
+} from './tools/schemas.js';
+import {
+    changeFileOwnership,
+    checkPort,
+    createScheduledTask,
+    createSymbolicLink,
+    deleteScheduledTask,
+    executeCommandChain,
+    getNetworkInfo,
+    getSystemInfo,
+    listScheduledTasks,
+    listServices,
+    manageService,
+    registryOperation,
+    scanNetwork,
+    setFilePermissions,
+    systemPowerAction,
+} from './tools/system.js';
 
 import { VERSION } from './version.js';
 
@@ -187,7 +219,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
       },
       {
         name: "list_allowed_directories",
-        description: 
+        description:
           "Returns the list of directories that this server is allowed to access.",
         inputSchema: {
           type: "object",
@@ -202,6 +234,82 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             "Multiple blocks can be used for separate changes. Will verify changes after application. " +
             "Format: filepath, then <<<<<<< SEARCH, content to find, =======, new content, >>>>>>> REPLACE.",
         inputSchema: zodToJsonSchema(EditBlockArgsSchema),
+      },
+      // System tools
+      {
+        name: "execute_command_chain",
+        description: "Execute multiple commands in sequence. Stops on first failure unless command starts with #.",
+        inputSchema: zodToJsonSchema(ExecuteCommandChainArgsSchema),
+      },
+      {
+        name: "set_file_permissions",
+        description: "Set file permissions (chmod/icacls).",
+        inputSchema: zodToJsonSchema(SetFilePermissionsArgsSchema),
+      },
+      {
+        name: "change_file_ownership",
+        description: "Change file ownership (chown). Unix only.",
+        inputSchema: zodToJsonSchema(ChangeFileOwnershipArgsSchema),
+      },
+      {
+        name: "create_symbolic_link",
+        description: "Create a symbolic link.",
+        inputSchema: zodToJsonSchema(CreateSymbolicLinkArgsSchema),
+      },
+      {
+        name: "get_system_info",
+        description: "Get comprehensive system information.",
+        inputSchema: zodToJsonSchema(GetSystemInfoArgsSchema),
+      },
+      {
+        name: "get_network_info",
+        description: "Get network interface and routing information.",
+        inputSchema: zodToJsonSchema(GetNetworkInfoArgsSchema),
+      },
+      {
+        name: "check_port",
+        description: "Check if a network port is open on a host.",
+        inputSchema: zodToJsonSchema(CheckPortArgsSchema),
+      },
+      {
+        name: "scan_network",
+        description: "Scan a network subnet for active hosts.",
+        inputSchema: zodToJsonSchema(ScanNetworkArgsSchema),
+      },
+      {
+        name: "list_services",
+        description: "List system services.",
+        inputSchema: zodToJsonSchema(ListServicesArgsSchema),
+      },
+      {
+        name: "manage_service",
+        description: "Start, stop, restart, enable, or disable a system service.",
+        inputSchema: zodToJsonSchema(ManageServiceArgsSchema),
+      },
+      {
+        name: "create_scheduled_task",
+        description: "Create a scheduled task (cron/schtasks).",
+        inputSchema: zodToJsonSchema(CreateScheduledTaskArgsSchema),
+      },
+      {
+        name: "list_scheduled_tasks",
+        description: "List scheduled tasks.",
+        inputSchema: zodToJsonSchema(ListScheduledTasksArgsSchema),
+      },
+      {
+        name: "delete_scheduled_task",
+        description: "Delete a scheduled task.",
+        inputSchema: zodToJsonSchema(DeleteScheduledTaskArgsSchema),
+      },
+      {
+        name: "system_power_action",
+        description: "Perform system power actions (shutdown, reboot, etc.).",
+        inputSchema: zodToJsonSchema(SystemPowerActionArgsSchema),
+      },
+      {
+        name: "registry_operation",
+        description: "Perform Windows Registry operations (Windows only).",
+        inputSchema: zodToJsonSchema(RegistryOperationArgsSchema),
       },
     ],
   };
@@ -253,7 +361,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request: CallToolRequest)
           content: [{ type: "text", text: blockedCommands.join('\n') }],
         };
       }
-      
+
       // Filesystem tools
       case "edit_block": {
         const parsed = EditBlockArgsSchema.parse(args);
@@ -316,21 +424,126 @@ server.setRequestHandler(CallToolRequestSchema, async (request: CallToolRequest)
         const parsed = GetFileInfoArgsSchema.parse(args);
         const info = await getFileInfo(parsed.path);
         return {
-          content: [{ 
-            type: "text", 
+          content: [{
+            type: "text",
             text: Object.entries(info)
               .map(([key, value]) => `${key}: ${value}`)
-              .join('\n') 
+              .join('\n')
           }],
         };
       }
       case "list_allowed_directories": {
         const directories = listAllowedDirectories();
         return {
-          content: [{ 
-            type: "text", 
-            text: `Allowed directories:\n${directories.join('\n')}` 
+          content: [{
+            type: "text",
+            text: `Allowed directories:\n${directories.join('\n')}`
           }],
+        };
+      }
+
+      // System tools
+      case "execute_command_chain": {
+        const parsed = ExecuteCommandChainArgsSchema.parse(args);
+        const results = await executeCommandChain(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(results, null, 2) }],
+        };
+      }
+      case "set_file_permissions": {
+        const parsed = SetFilePermissionsArgsSchema.parse(args);
+        const result = await setFilePermissions(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "change_file_ownership": {
+        const parsed = ChangeFileOwnershipArgsSchema.parse(args);
+        const result = await changeFileOwnership(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "create_symbolic_link": {
+        const parsed = CreateSymbolicLinkArgsSchema.parse(args);
+        const result = await createSymbolicLink(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "get_system_info": {
+        const info = await getSystemInfo();
+        return {
+          content: [{ type: "text", text: JSON.stringify(info, null, 2) }],
+        };
+      }
+      case "get_network_info": {
+        const info = await getNetworkInfo();
+        return {
+          content: [{ type: "text", text: JSON.stringify(info, null, 2) }],
+        };
+      }
+      case "check_port": {
+        const parsed = CheckPortArgsSchema.parse(args);
+        const result = await checkPort(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "scan_network": {
+        const parsed = ScanNetworkArgsSchema.parse(args);
+        const result = await scanNetwork(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "list_services": {
+        const parsed = ListServicesArgsSchema.parse(args);
+        const services = await listServices(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(services, null, 2) }],
+        };
+      }
+      case "manage_service": {
+        const parsed = ManageServiceArgsSchema.parse(args);
+        const result = await manageService(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "create_scheduled_task": {
+        const parsed = CreateScheduledTaskArgsSchema.parse(args);
+        const result = await createScheduledTask(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "list_scheduled_tasks": {
+        const parsed = ListScheduledTasksArgsSchema.parse(args);
+        const tasks = await listScheduledTasks(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(tasks, null, 2) }],
+        };
+      }
+      case "delete_scheduled_task": {
+        const parsed = DeleteScheduledTaskArgsSchema.parse(args);
+        const result = await deleteScheduledTask(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "system_power_action": {
+        const parsed = SystemPowerActionArgsSchema.parse(args);
+        const result = await systemPowerAction(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+        };
+      }
+      case "registry_operation": {
+        const parsed = RegistryOperationArgsSchema.parse(args);
+        const result = await registryOperation(parsed);
+        return {
+          content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
         };
       }
       default:

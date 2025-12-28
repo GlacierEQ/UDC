@@ -37,3 +37,9 @@ coverage/
 .history
 
 server.log
+# Cache
+local-npm-cache/
+npm-cache/
+__pycache__/
+ops/__pycache__/
+
