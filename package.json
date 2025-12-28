@@ -1,6 +1,6 @@
 {
   "name": "@jasondsmith72/desktop-commander",
-  "version": "0.1.22",
+  "version": "0.2.0",
   "description": "MCP server for terminal operations and file editing with configurable allowed directories",
   "license": "MIT",
   "author": "Eduards Ruzga",
